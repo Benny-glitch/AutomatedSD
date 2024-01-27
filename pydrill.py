@@ -9,6 +9,31 @@ import git
 import utils
 
 
+def download_spotbugs(target_directory=utils.PROJECT_REPO):
+    target_path = os.path.join(target_directory, "spotbugs.tar.gz")
+    spotbugs_url = f'https://github.com/spotbugs/spotbugs/releases/download/4.8.3/spotbugs-4.8.3.tgz'
+    response_spotbugs = requests.get(spotbugs_url, stream=True)
+
+    if not os.path.exists('spotbugs-4.8.3') and not os.path.isdir('spotbugs-4.8.3'):
+        if response_spotbugs.status_code == 200:
+            # Scrivi il contenuto della risposta nel file di destinazione
+            with open(target_path, 'wb') as file:
+                shutil.copyfileobj(response_spotbugs.raw, file)
+            print(f"Download completato: {target_path}")
+
+            # Ora puoi procedere con l'installazione del file scaricato
+            # (il metodo dipende dal formato del file, ad esempio, potresti dover decomprimere un archivio)
+
+            # Esempio: decomprimi un file .tar.gz (da adattare se il formato è diverso)
+            with tarfile.open(target_path, 'r:gz') as tar:
+                tar.extractall(target_directory)
+
+            os.remove(target_directory + "/spotbugs.tar.gz")
+        else:
+            print(f"Errore durante il download. Codice di stato: {response_spotbugs.status_code}")
+
+
+
 def repo_reset_and_download():
     # Se la directory di destinazione esiste, eliminala
     if os.path.exists(utils.REPO_PATH):

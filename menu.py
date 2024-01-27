@@ -25,9 +25,14 @@ def commit_divisor():
 
 
 def start():
+    pydrill.download_spotbugs()
+    print("Scaricando Spotbugs...")
     pydrill.repo_reset_and_download()
-    pydrill.reset_logs()
+    print("Scaricando la repo -> Cassandra")
     pydrill.download_java_and_ant_version()
+    print("Scaricando java e and...")
+    pydrill.reset_logs()
+    print("Resetto la cartella LOG...")
     print('Inserisci da che numero vuoi iniziare a analizzare: ')
     start_commit = input()
     print("Inserisci da che numero vuoi finire l'analizzazione: ")

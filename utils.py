@@ -18,8 +18,6 @@ XML_BUILD_PATH = REPO_PATH + '/build.xml'
 
 PROJECT_REPO = os.path.dirname(os.path.abspath(__file__))
 
-JAVA_11_PATH = os.path.dirname(os.path.abspath(__file__)) + '/jdk-11.0.20.jdk/Contents/Home'
-
 JAVA_17_PATH_MAC = os.path.dirname(os.path.abspath(__file__)) + '/jdk-17.0.2.jdk/Contents/Home'
 
 JAVA_17_PATH_LINUX = os.path.dirname(os.path.abspath(__file__)) + '/jdk-17.0.2'
