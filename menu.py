@@ -25,7 +25,7 @@ def commit_divisor():
 
 
 def start():
-    #pydrill.repo_reset_and_download()
+    pydrill.repo_reset_and_download()
     pydrill.reset_logs()
     pydrill.download_java_and_ant_version()
     print('Inserisci da che numero vuoi iniziare a analizzare: ')
