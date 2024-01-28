@@ -6,10 +6,10 @@ Questo script in Python viene utilizzato per analizzare, attraverso SPOTBUGS, un
 ## Requisiti
 -   Sistema operativo: GNU/Linux/MAC necessario per eseguire la build.
 -   Python 3.x.x installato nel sistema
--   Installare le librerie attraverso il file ```requirements.txt```
+-   Installare le librerie attraverso il file ```requirments.txt```
 Puoi installare le librerie necessarie attraverso:
 ```bash
-  pip install requirements.txt
+  pip install requirments.txt
 ```
     
 ## Utilizzo 
