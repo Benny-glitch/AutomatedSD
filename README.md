@@ -26,8 +26,6 @@ Puoi installare le librerie necessarie attraverso:
 
 ## Note
 
-This project is used by the following companies:
-
 - I commit che non presentano una build valida vengono automaticamente scartati
 - I risultati vengono scitti nella cartella ```results``` in un file ```.csv``` che conterrà:  
    -   Hash del commit per esteso
